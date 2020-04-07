@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/style.css' %}">
+<html>
+    <head>
+    <title>Lixin's News</title>
+    </head>
+
+    <body>
+        <h1>Latest News...</h1>
+        <div>  <strong>{{ boldmessage }}</strong><br />
+            <p><span id="datetime"></span></p>
+            <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"."+ (("0"+(dt.getMonth()+1)).slice(-2)) +"."+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
+            </script>
+            It has now been confirmed that Greg is the worst.<br />
+            <br />
+
+        <strong>Matt is the Best!</strong><br />
+                              
+             In other news, it has emerged that Matt is the best.<br />
+             <br />
+
+    <div> <a href="/news/more/">More News...</a><br />      </div>
+    </body>
+</html>
